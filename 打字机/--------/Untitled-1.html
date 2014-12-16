@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="../jquar 插件/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="jquery.typetype.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		
+		//$('textarea').typetype('Some text that you want to demo')		
+		
+		$('textarea').typetype(
+ 			 'Text to append6262626262626',
+  		{
+			e: 0.04, // error rate. (use e=0 for perfect typing)
+			t: 100, // interval between keypresses
+			keypress: function (){
+			  // called after every keypress (this may be an erroneous keypress!)
+		    },
+			callback: function (){
+			  // the `this` keyword is bound to the particular element.
+		    }
+         }
+        )
+		
+});
+
+
+</script>
+</head>
+
+<body>
+
+	<textarea id="usage" title="Just 578 bytes gzipped!" readonly spellcheck='off' wrap='off'></textarea>
+
+</body>
+</html>
