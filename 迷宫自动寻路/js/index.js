@@ -62,8 +62,15 @@ maze.print_solution = function() {
      
       if(maze.solution_copy.length != 0) maze.print_solution();
       else {
-        $('#solve').text("solved").addClass('disabled')
+        $('#solve').text("Found").addClass('disabled')
         $('#regen').removeClass('disabled')
+        setTimeout(function(){
+            $('#magic').css('display','none');
+            $('.apple').css('left',($(window).width()/2)-46);
+            $('#YouHolder').css('display','block');
+            $('.apple').animate({top:355},1200);
+            $('h2').animate({opacity:1},3000);
+        },1200);
       }
   }, 50)
 }
@@ -179,7 +186,7 @@ $('#regen').click(function(){
 })
 
 $('#solve').click(function(){
-  $(this).text("solving...").addClass('disabled')
+  $(this).text("Finding...").addClass('disabled')
   $('#regen').addClass('disabled')
   maze.solution = [];
   maze.solve(0,0);

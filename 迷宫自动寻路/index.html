@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
 
-  <title>Just another maze - CodePen</title>
+  <title>Merry Christmas</title>
 
 
     <style>
@@ -131,28 +131,62 @@ h1 {
   background: #B52424;
   z-index: 1;
 }
-
+#magic{
+  width: auto;
+}
+#YouHolder {
+  width: 100%;
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+  display: none;
+}
+#YouHolder h2{
+  font-size: 50px;
+  text-align: center;
+  opacity: 0;
+  filter:alpha(opacity=0);
+}
+.you{
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: 90px auto;
+  margin-bottom: 50px;
+}
+.apple{
+  position: absolute;
+  left: 0;
+  top: -355px;
+}
+      .copyright{
+        text-align: center;
+        color: #666;
+        font-size: 13px;
+      }
 </style>
-
     <script src="js/prefixfree.min.js"></script>
-
 </head>
 
 <body>
-
-  <div id='maze-holder'>
-  <h1>Just another maze</h1>
-  <div id='btns'>
-    <div class='btn' id='solve'>solve</div>
-    <div class='btn' id='regen'>regenerate</div>
+<div id='magic'>
+    <div id='maze-holder'>
+    <h1>To WangQiuTong</h1>
+    <div id='btns'>
+      <div class='btn' id='solve'>find YoU</div>
+    </div>
+    <div id='maze'></div>
   </div>
-  <div id='maze'></div>
 </div>
-
+<div id='YouHolder'>
+   <img src="img/WangQiuTong.png" class='you'>
+   <img src='img/apple.png' class='apple'>
+   <h2>Merry Christmas!</h2>
+    <h2>愿你平安快乐!</h2>
+  <p class="copyright">Powered By Hale With Love</p>
+</div>
   <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-
   <script src="js/index.js"></script>
-
 </body>
 
 </html>
